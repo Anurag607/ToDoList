@@ -1,0 +1,68 @@
+<!Doctype html>
+<html lang = "en-in/us">
+<head>
+    <link rel = "icon" href = "./images/to-do.png" type = "image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="description" content="#">
+    <meta name="keywords" content="#">
+    <meta name="author" content="Deep">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <link rel = "stylesheet" href = "style.css" type = "text/css">
+    <script src= "script.js" type="text/javascript"></script>
+    <title>To do List</title>
+</head>
+<body>
+    <div class= "menu" data-toggle="off">
+        <div>
+            <span class="menu-bar"></span>
+            <span class="menu-bar"></span>
+            <span class="menu-bar"></span>
+        </div>
+        <div class="menu-bg"></div>
+    </div>
+    <div class="sidebar">
+        <div id="sidebarel">
+            <h2>History : </h2>
+            <ul>
+                <li class='listItem' data-visible="no">Saved List</li>
+            </ul>
+        </div>
+        <div id="sidebartable">
+            <table>
+                <tbody id="savedtasks">
+                    <tr>
+                        <!-- <th>Task No.</th> -->
+                        <th>Day</th>
+                        <th>Date</th>
+                        <th>Task</th>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div id="input-form">
+        <h1 id="title">To do List</h1>
+        <form>
+            <input type="text" name="day" id="day" placeholder="Day" required>
+            <input type="date" name="date" id="date" placeholder="Date" required>
+            <input type="text" name="task" id="task" placeholder="Task" required>
+            <input type="submit" value="Submit" id="submit">
+        </form>
+        <div id="msg">See your List</div>
+        <a href=".list" id="down"><img src="./images/down.svg" id="arrow" data-toggle="down"></a>
+    </div>
+    <div id="list">
+        <table>
+            <tbody id="tasks">
+                <tr>
+                    <!-- <th>Task No.</th> -->
+                    <th>Day</th>
+                    <th>Date</th>
+                    <th>Task</th>
+                </tr>
+            </tbody>
+        </table>
+        <button id="confirm">Confirm</button>
+    </div>
+</body>
+</html>
