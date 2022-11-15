@@ -20,11 +20,14 @@ document.addEventListener("DOMContentLoaded", () => {
     let listrow = {};
 
     let store = () => {
-        window.localStorage.myList = tasks.innerHTML;
+        // window.localStorage.myList = tasks.innerHTML;
+        sessionStorage.setItem('mylist', tasks.innerHTML);
+        console.log(sessionStorage.getItem('mylist'));
     }
     
     let getLists = () => {
-        saved = window.localStorage.myList;
+        // saved = window.localStorage.myList;
+        saved = sessionStorage.getItem('mylist');
         console.log(saved);
         if(!saved) {
             tasks.innerHTML = "<tr><th>Day</th><th>Date</th><th>Task</th></tr>";
@@ -223,7 +226,8 @@ document.addEventListener("DOMContentLoaded", () => {
                 listCount++;
                 window.localStorage.listCounter = listCount;
                 tasks.innerHTML = "<tr><th>Day</th><th>Date</th><th>Task</th></tr>";
-                window.localStorage.myList = "<tr><th>Day</th><th>Date</th><th>Task</th></tr>";
+                // window.localStorage.myList = "<tr><th>Day</th><th>Date</th><th>Task</th></tr>";
+                // sessionStorage.setItem('mylist', "<tr><th>Day</th><th>Date</th><th>Task</th></tr>");
                 window.localStorage.counter = 0;
             }
         }
