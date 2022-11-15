@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
             savedtasks.innerHTML = "<tr><th>Day</th><th>Date</th><th>Task</th></tr>";
         } else {
             tasks.innerHTML = saved;
-            // savedtasks.innerHTML = saved;
+            savedtasks.innerHTML = saved;
         }
     }
 
@@ -173,12 +173,11 @@ document.addEventListener("DOMContentLoaded", () => {
         button.onmouseout = () => {
             button.style.transform = "scale(1) translateY(0.125rem)";
         }
-        // input_value.push(count);
         input.forEach((input) => {
             input_value.push(input.value[0].toUpperCase() + input.value.slice(1));
         });
         input_value.splice(input_value.length-1,1);
-        for (let i = 0; i < 4; i++) {
+        for (let i = 0; i < 3; i++) {
             var td = document.createElement("td");
             td.innerHTML = input_value[i];
             tr.append(td);
